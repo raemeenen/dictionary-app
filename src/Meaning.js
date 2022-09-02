@@ -1,5 +1,6 @@
 import React from "react";
 import "./Phonetic.css";
+import "./Meaning.css";
 
 export default function Meaning (props) {
   return (
@@ -9,21 +10,15 @@ export default function Meaning (props) {
         {if (definition.example) {
           return (
             <div key={index}>
-              <div>
-                <strong>Definition: </strong>{definition.definition}
-                <br />
-                <strong>Example: </strong><em>{definition.example}</em>
-                <br />
-                <br />
-              </div>
+              <div className="definition">{definition.definition} </div>
+              <div className="example">{definition.example}</div>
+              <br />
             </div>
           )
         } else {
           return (
             <div key={index}>
-              <div>
-                <strong>Definition: </strong>{definition.definition}
-              </div>
+              <div className="definition">{definition.definition} </div>
             </div>
           )
 
