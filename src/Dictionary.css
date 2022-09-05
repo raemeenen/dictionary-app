@@ -17,8 +17,15 @@
 .Dictionary section {
   border: 1px solid #40356f; 
   border-radius: 5px;
-  box-shadow: 2px 5px 10px #40356f;
+  box-shadow: 2px 1px 10px #40356f;
   margin: 10px;
   padding: 20px;
   background-color: #fff;
+}
+
+@media (max-width: 700px) {
+  .Dictionary {
+    margin: 10px 5px;
+    padding: 10px;
+  }
 }

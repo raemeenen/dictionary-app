@@ -7,3 +7,9 @@
   font-style: italic;
   opacity: .8;
 }
+
+@media (max-width: 700px) {
+  .Meaning h3 {
+    font-size: 24px;
+  }
+}
