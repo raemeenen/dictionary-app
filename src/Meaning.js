@@ -21,7 +21,6 @@ export default function Meaning (props) {
               <div className="definition">{definition.definition} </div>
             </div>
           )
-
         }
       })}
     </div>

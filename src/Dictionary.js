@@ -11,12 +11,10 @@ export default function Dictionary (props) {
   let [photos, setPhotos] = useState(null);
 
   function handleDictionaryResponse (response) {
-    console.log(response.data[0]);
     setResults(response.data[0]);
   }
 
   function handlePexelsResponse(response) {
-    console.log(response);
     setPhotos(response.data.photos);
   }
 
@@ -25,7 +23,7 @@ export default function Dictionary (props) {
     axios.get(apiUrl).then(handleDictionaryResponse);
 
     let pexelsApiKey = "563492ad6f91700001000001a22a6750eb3a421095ba25e04f37d547";
-    let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=3`;
+    let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=6`;
     let headers = {Authorization: `Bearer ${pexelsApiKey}`}
     axios.get(pexelsApiUrl, {headers: headers}).then(handlePexelsResponse);
   }
@@ -48,6 +46,7 @@ export default function Dictionary (props) {
     return (
       <div className="Dictionary">
         <section>
+            <h1>Dictionary App</h1>
             <h2>Look up a word:</h2>
             <form onSubmit={handleSubmit}>
             <input type="search" onChange={handleKeywordChange} defaultValue={props.defaultKeyword}/>

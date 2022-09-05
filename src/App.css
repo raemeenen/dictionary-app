@@ -4,14 +4,16 @@
 }
 
 .App h1 {
-  font-size: 96px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 80px;
+  background-color: #e7eaf6;
   text-align: center;
-  margin: 10px auto;
-  color: #596e79;
-}
+  margin: 10px 30px 20px;
+  border-radius: 4px;
+ }
 
-.App h2, h3 {
-  color: #596e79
+.App h1, h2, h3 {
+  color: #40356f
 }
 
 .App .App-footer {
@@ -20,6 +22,5 @@
 }
 
 .App .App-footer a {
-  text-decoration: none;
-  color: #596e79
+  color: #40356f;
 }
