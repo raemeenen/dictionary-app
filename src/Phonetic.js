@@ -1,7 +1,6 @@
 import React from "react";
 
 export default function Phonetic (props) {  
-  console.log(props.phonetic)
   if (props.phonetic[0].audio) {
     return (
       <div className="Phonetic">
